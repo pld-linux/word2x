@@ -31,7 +31,7 @@ zgadywaniu z kontekstu i mo¿e robiæ b³êdy.
 %build
 chmod u+w *
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 
