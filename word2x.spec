@@ -2,7 +2,7 @@ Summary:	word2x convert word 6 documents to another format
 Summary(pl):	Konwerter dokumentów MS Worda 6 do innych formatów
 Name:		word2x
 Version:	0.005
-Release:	3
+Release:	4
 License:	GPL
 Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
 Group:		Applications/Text
