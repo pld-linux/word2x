@@ -27,8 +27,6 @@ CXXFLAGS="%{?debug:-g -O}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
 %configure
 
 %{__make}
-##CPPFLAGS="$CFLAGS -fno-rtti -fno-exceptions -fno-implicit-templates" \
-#CCFLAGS="$RPM_OPT_FLAGS -DHAVE_CONFIG_H" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
