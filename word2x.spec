@@ -23,7 +23,7 @@ context and can make mistakes.
 %patch -p1
 
 %build
-CXXFLAGS="%{?debug:-g -O}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
+CXXFLAGS="%{?debug:-g -O0}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
 %configure
 
 %{__make}
