@@ -1,0 +1,26 @@
+--- word2x-0.005/Makefile.in.orig	Mon Dec 28 22:17:43 1998
++++ word2x-0.005/Makefile.in	Sun Jan  7 15:20:36 2001
+@@ -6,10 +6,11 @@
+ CPP=@CXX@
+ 
+ #seek_set_hdr is a hack for Sun OS (and others? I hope not)
+-CPPFLAGS=-g -Wall @DEFS@ @seek_set_hdr@
++CPPFLAGS=@CXXFLAGS@ -Wall @DEFS@ @seek_set_hdr@
+ LD=@ld@
+ 
+-CCFLAGS=-O3 @DEFS@
++CFLAGS=@CFLAGS@
++CCFLAGS=@CFLAGS@ @DEFS@
+ LIBOBJS=wordwrap.o nullproc.o tblock.o scan_num.o map_chars.o col-align.o \
+ 	compat.o num_unit_probe.o part_num_probe.o
+ AR=ar
+@@ -30,7 +31,8 @@
+ %.o: %.cc
+ 	$(CPP) $(CPPFLAGS) -c -o $@ $<
+ 
+-%.o: $.c $(CC) $(CCFLAGS) -c -o $@ $<
++%.o: %.c
++	$(CC) $(CCFLAGS) -c -o $@ $<
+ 
+ all:	config.h $(TARGETS)
+ 
