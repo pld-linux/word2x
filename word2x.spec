@@ -7,6 +7,7 @@ License:	GPL
 Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
 Group:		Applications/Text
 Source0:	http://word2x.alcom.co.uk/download/%{name}-%{version}.tar.gz
+# Source0-md5:	50113e81b9f0e81d55cee1da6eea0f02
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-gcc3.patch
 URL:		http://word2x.alcom.co.uk/
