@@ -32,7 +32,7 @@ zgadywaniu z kontekstu i mo¿e robiæ b³êdy.
 chmod u+w *
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 aclocal
-autoconf
+%{__autoconf}
 %configure
 
 %{__make}
