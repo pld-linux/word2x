@@ -1,4 +1,5 @@
 Summary:	word2x convert word 6 documents to another format
+Summary(pl):	Konwerter dokumentów MS Worda 6 do innych formatów
 Name:		word2x
 Version:	0.005
 Release:	2
@@ -7,7 +8,7 @@ Group:		Applications/Text
 Group(de):	Applikationen/Text
 Group(pl):	Aplikacje/Tekst
 Source0:	http://word2x.alcom.co.uk/download/%{name}-%{version}.tar.gz
-Patch0:		word2x-opt.patch
+Patch0:		%{name}-opt.patch
 URL:		http://word2x.alcom.co.uk
 Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,7 +24,7 @@ context and can make mistakes.
 %patch -p1
 
 %build
-CXXFLAGS="%{?debug:-g -O0}%{!?debug:$RPM_OPT_FLAGS} -fno-rtti -fno-exceptions"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %configure
 
 %{__make}
