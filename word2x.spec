@@ -5,9 +5,6 @@ Version:	0.005
 Release:	3
 License:	GPL
 Group:		Applications/Text
-Group(de):	Applikationen/Text
-Group(fr):	Utilitaires/Texte
-Group(pl):	Aplikacje/Tekst
 Source0:	http://word2x.alcom.co.uk/download/%{name}-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
 URL:		http://word2x.alcom.co.uk
