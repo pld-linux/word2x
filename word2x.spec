@@ -13,11 +13,18 @@ URL:		http://word2x.alcom.co.uk
 Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	libstdc++-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 
 %description
 word2x is a program that attempts to produce a component, if not
 perfect rendition of a word 6 document. It guesses rather a lot from
 context and can make mistakes.
+
+%description -l pl
+word2x jest programem, który próbuje zrobiæ kompletny, je¿eli nie
+doskona³y obraz dokumentu Worda 6. Program opiera siê bardziej na
+zgadywaniu z kontekstu i mo¿e robiæ b³êdy.
 
 %prep
 %setup -q
