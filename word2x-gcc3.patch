@@ -1,0 +1,31 @@
+--- word2x-0.005/reader.cc.orig	Wed Oct  7 20:12:09 1998
++++ word2x-0.005/reader.cc	Sat Oct 12 12:15:23 2002
+@@ -48,7 +48,7 @@
+ 	if (in->eof())
+ 	    return EOF;
+     
+-	in->get(c);
++	in->get((char&)c);
+     }
+     else
+     {
+@@ -66,7 +66,7 @@
+ 
+     case TABLE_SEP:
+ 	if (!in->eof())
+-	    in->get(d);
++	    in->get((char&)d);
+ 	else
+ 	    d=c+1;		// Not equal to c
+ 	if (d!=c)
+--- word2x-0.005/tblock.h.orig	Wed Oct  7 20:12:09 1998
++++ word2x-0.005/tblock.h	Sat Oct 12 12:17:31 2002
+@@ -4,6 +4,8 @@
+ #ifndef __tblock_h__
+ #define __tblock_h__
+ 
++#include <string.h>
++
+ class tblock
+ {
+ private:

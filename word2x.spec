@@ -4,15 +4,16 @@ Name:		word2x
 Version:	0.005
 Release:	3
 License:	GPL
+Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
 Group:		Applications/Text
 Source0:	http://word2x.alcom.co.uk/download/%{name}-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
+Patch1:		%{name}-gcc3.patch
 URL:		http://word2x.alcom.co.uk/
-Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:	libstdc++-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libstdc++-devel
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 word2x is a program that attempts to produce a component, if not
@@ -26,10 +27,12 @@ zgadywaniu z kontekstu i mo¿e robiæ b³êdy.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 chmod u+w *
+cp -f /usr/share/automake/config.* .
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 %{__aclocal}
 %{__autoconf}
