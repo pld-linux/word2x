@@ -7,7 +7,7 @@ License:	GPL
 Group:		Applications/Text
 Source0:	http://word2x.alcom.co.uk/download/%{name}-%{version}.tar.gz
 Patch0:		%{name}-opt.patch
-URL:		http://word2x.alcom.co.uk
+URL:		http://word2x.alcom.co.uk/
 Vendor:		Duncan Simpson <dps@io.stargate.co.uk>
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	libstdc++-devel
@@ -44,14 +44,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install word2x rtest2 $RPM_BUILD_ROOT%{_bindir}
 install word2x.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf README INTERNALS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README INTERNALS
 %attr(755, root, root) %{_bindir}/word2x
 %attr(755, root, root) %{_bindir}/rtest2
 %{_mandir}/man1/word2x.1*
