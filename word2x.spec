@@ -1,5 +1,5 @@
 Summary:	word2x convert word 6 documents to another format
-Summary(pl.UTF-8):   Konwerter dokumentów MS Worda 6 do innych formatów
+Summary(pl.UTF-8):	Konwerter dokumentów MS Worda 6 do innych formatów
 Name:		word2x
 Version:	0.005
 Release:	5
