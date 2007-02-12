@@ -1,5 +1,5 @@
 Summary:	word2x convert word 6 documents to another format
-Summary(pl):	Konwerter dokumentów MS Worda 6 do innych formatów
+Summary(pl.UTF-8):   Konwerter dokumentÃ³w MS Worda 6 do innych formatÃ³w
 Name:		word2x
 Version:	0.005
 Release:	5
@@ -21,10 +21,10 @@ word2x is a program that attempts to produce a component, if not
 perfect rendition of a word 6 document. It guesses rather a lot from
 context and can make mistakes.
 
-%description -l pl
-word2x jest programem, który próbuje zrobiæ kompletny, je¿eli nie
-doskona³y obraz dokumentu Worda 6. Program opiera siê bardziej na
-zgadywaniu z kontekstu i mo¿e robiæ b³êdy.
+%description -l pl.UTF-8
+word2x jest programem, ktÃ³ry prÃ³buje zrobiÄ‡ kompletny, jeÅ¼eli nie
+doskonaÅ‚y obraz dokumentu Worda 6. Program opiera siÄ™ bardziej na
+zgadywaniu z kontekstu i moÅ¼e robiÄ‡ bÅ‚Ä™dy.
 
 %prep
 %setup -q
